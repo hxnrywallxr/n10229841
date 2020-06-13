@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Clothes Online">
+
+    <!-- Bootstrap Required Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Clothes Online</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/js/bootstrap-alert.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+			$("#btn").click(function() {
+				$('#success-alert').removeClass('hidden');
+			});
+          $("button.close").click(function() {
+				$('#success-alert').addClass('hidden');
+			});
+
+		});
+    </script>
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand text-light">
+                    <img src="img/logo.jpg" width="30" height="30" class="d-inline-block align-top"
+                    alt="Clothes Online Logo">
+                    Clothes Online
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                    aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Navbar -->
+                <div class="collapse navbar-collapse" id="navbarToggler">
+                    <div class="navbar-nav ml-auto">
+                        <a class="nav-item text-light nav-link" href="#">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header> 
+    <!-- End header -->
+
+    <!-- Contains the main content of the website, divided into sections -->
+    <section>
+        <div class = "container-fluid">
+            <div class="alert alert-success hidden" id="success-alert">
+                <button type="button" class="close">x</button>
+                <span class="glyphicon glyphicon-ok"></span>
+                Order placed successfully! Order Reference #1379832134
+            </div>
+        </div>
+    </section>
+    <main class="container">
+        <section>
+            <div class="row justify-content-center mt-5 pb-4">
+                <div class="col-md-8">
+                    <div class="jumbotron shadow py-4 mb-5 ">
+                        <h1 class="text-center">Treasures</h1>
+                        <form class="form-inline d-flex flex-nowrap">
+                            <input class="form-control flex-grow-1 my-1 mr-sm-2" type="search" placeholder="Search brand or product..." aria-label="Search">
+                            <button type="search" class="flex-shrink-1 btn btn-primary my-1">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row mt-5 pb-4">
+                <div class="col-md-8">
+                    <h2>Your Cart</h2>
+                    <h3>Product Details</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="img-fluid img-thumbnail" src="img/Shirt.png" alt="Pallet T-Shirt">
+                </div>
+                <div class="col-md-4">
+                    <h4>$39.95</h4>
+                    <div class="form-group">
+                        <label for="quantityInput">Quantity</label>
+                        <input type="number" class="form-control" min="0" id="quantityInput" placeholder="1">
+                    </div>
+                </div>
+                <div class="col-md-4 container">
+                    <h2>Order Summary</h2>
+                    <h4>Total: $39.95</h4>
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header">
+                            <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                                Delivery Address
+                            </a>
+                            </div>
+                            <div id="collapseOne" class="collapse show" data-parent="#accordion">
+                            <div class="card-body">
+                                Please enter the delivery address:
+                                <br>
+                                <input class="form-control flex-grow-1 my-1 mr-sm-2" type="text" placeholder="Address Line 1">
+                                <input class="form-control flex-grow-1 my-1 mr-sm-2" type="text" placeholder="Address Line 2">
+                                <input class="form-control flex-grow-1 my-1 mr-sm-2" type="text" placeholder="Address Line 3">
+                                <a role="button" class="btn btn-primary my-1" style="width:100%">Save</a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary my-1" id="btn" style="width:100%">Place Order</button>
+                    <a role="button" class="btn btn-primary my-1" href="homepage.html" style="width:100%">Continue Shopping</a>
+                    <a role="button" class="btn btn-primary my-1" href="#contactUs" style="width:100%">Contact Seller</a>
+                    <a role="button" class="btn btn-warning my-1" href="homepage.html" style="width:100%">Empty Cart</a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <hr>
+            <div id="contactUs">
+                <h2>Contact Seller</h2>
+            </div>
+            <form method="post" id="indexcontactform">
+                <div class="form-group">
+                    <label for="contactName">Name</label>
+                    <input type="text" class="form-control" id="contactName" aria-describedby="nameHelp"
+                        placeholder="Enter your name.">
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email Address</label>
+                    <input type="email" class="form-control" id="contactEmail" aria-describedby="emailHelp"
+                        placeholder="Enter your email address.">
+                    <small id="emailHelp" class="form-text text-muted">Your email address is safe with us.</small>
+                </div>
+                <a href="homepage.html" class="btn btn-primary">Send Message</a></div>
+            </form>
+
+        </section>
+    </main> 
+    <!-- End main content area -->
+    <!-- Footer of the website -->
+    <footer class="footer">
+        <div class="text-center py-2 bg-secondary">
+            <span class="text-light">Copyright &copy; Clothes Online 2020</span>
+        </div>
+    </footer>
+</body>
+</html>
